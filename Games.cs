@@ -16,6 +16,7 @@ namespace GameBeat
         private DateTime startDate { get; set; }
         private DateTime endDate { get; set; }
 
+        // Metodos Construtores
         public Games(string nameGame, double hoursPlayed, string genderGame, string plataformThrown, int nota, DateTime startDate, DateTime endDate)
         {
             this.nameGame = nameGame;
@@ -25,6 +26,16 @@ namespace GameBeat
             this.nota = nota;
             this.startDate = startDate;
             this.endDate = endDate;
+        }
+
+        public Games(string nameGame, double hoursPlayed, string genderGame, string plataformThrown, int nota, DateTime startDate)
+        {
+            this.nameGame = nameGame;
+            this.hoursPlayed = hoursPlayed;
+            this.genderGame = genderGame;
+            this.plataformThrown = plataformThrown;
+            this.nota = nota;
+            this.startDate = startDate;
         }
 
         public Games()
@@ -38,21 +49,15 @@ namespace GameBeat
             endDate = DateTime.MinValue;
         }
 
-        public Games(string nameGame, double hoursPlayed, string genderGame, string plataformThrown, int nota, DateTime startDate)
+        // Construtor teste
+        public Games(string nameGame, double hoursPlayed, string genderGame)
         {
             this.nameGame = nameGame;
             this.hoursPlayed = hoursPlayed;
             this.genderGame = genderGame;
-            this.plataformThrown = plataformThrown;
-            this.nota = nota;
-            this.startDate = startDate;
         }
 
-        public Games(string nameGame)
-        {
-            this.nameGame = nameGame;
-        }
-
+        // Metodos Getters e Setters
         public string GetNameGame()
         {
             return nameGame;
@@ -63,6 +68,28 @@ namespace GameBeat
             nameGame = nome;
         }
 
+        public double GetHoursPlayed()
+        {
+            return hoursPlayed;
+        }
+
+        public void SetHoursPlayed(double horas)
+        {
+            hoursPlayed = horas;
+        }
+
+        public string GetGenderGame()
+        {
+            return genderGame;
+        }
+
+        public void SetGenderGame(string genero)
+        {
+            genderGame = genero;
+        }
+
+
+        // Override do ToString para exibir as informações do jogo
         public override string ToString()
         {
             return $"Nome do jogo: {nameGame}\nHoras jogadas: {hoursPlayed}";

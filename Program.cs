@@ -27,6 +27,9 @@
 
             Console.WriteLine();
             game.SetNameGame(nome);
+            game.SetHoursPlayed(horas);
+            game.SetGenderGame(genero);
+
 
             Console.WriteLine(game);
         }
